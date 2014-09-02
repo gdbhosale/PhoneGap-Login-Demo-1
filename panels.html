@@ -9,11 +9,8 @@
 <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
 <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
 <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
-
-<style>
-.ui-mobile .ui-page{background-image:url(img/texture1.png) !important;}
-.logo{max-width:100%;width:280px;margin:10% auto;}
-</style>
+<link rel="stylesheet" href="css/mystyles.css" />
+    
 <!-- jQuery / jQueryMobile Scripts -->
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script>
@@ -21,15 +18,42 @@
 <body>
 <div data-role="page" data-theme='b'>
     <div data-role="panel" data-display="push" id="mypanel" data-theme="b">
+        <div class="profile-box">
+            <div class="pic">
+                <img src="http://1.gravatar.com/avatar/b77d26180661c54e9aa85fec9e687aa0?s=128&d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D128&r=G">
+            </div>
+            <div class="info">
+                <h3>Ganesh Bhosale</h3>
+                <p><i class='fa fa-building-o'></i> Dwij IT Solutions</p>
+                <p><i class='fa fa-compass'></i> Pune</p>
+            </div>
+        </div>
+        
         <ul data-role="listview">
             <li>Your wishes</li>
-            <li data-icon='false'><a href="#"><i class='lIcon fa fa-coffee'></i>Need a Coffee</a></li>
-            <li data-icon='false'><a href="#"><i class='lIcon fa fa-beer'></i>Have a Beer</a></li>
-            <li data-icon='false'><a href="#"><i class='lIcon fa fa-music'></i>Play Music</a></li>
-            <li data-icon='false'><a href="#"><i class='lIcon fa fa-fire'></i>Make a fire</a></li>
-            <li data-icon='false'><a href="#"><i class='lIcon fa fa-bullhorn'></i>Shout it loud</a></li>
-            <li data-icon='false'><a href="#"><i class='lIcon fa fa-heart'></i>Meet friends</a></li>
-            <li data-icon='false'><a href="#"><i class='lIcon fa fa-trophy'></i>Win a Trophy</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-home'></i>Dashboard</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-inbox'></i>Messages</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-calendar'></i>Calendar</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-file'></i>Projects</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-group'></i>Clients</a></li>
+            <li>Revenue</li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-rupee'></i>Transactions</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-file-text-o'></i>Invoices</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-arrow-down'></i>Liabilities</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-bar-chart-o'></i>Reports</a></li>
+            <li>Tasks</li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-code'></i>Project Tasks</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-puzzle-piece'></i>General Tasks</a></li>
+            <li>Marketing</li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-briefcase'></i>Probable Clients</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-bullhorn'></i>Marketing Campaigns</a></li>
+            <li>Organization</li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-user'></i>Employees</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-umbrella'></i>Leaves</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-money'></i>Salary Sheets</a></li>
+            <li>Misc.</li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-files-o'></i>Quotations</a></li>
+            <li data-icon='false'><a href="#"><i class='lIcon fa fa-users'></i>Users</a></li>
         </ul>
     </div>
     <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
@@ -37,16 +61,26 @@
         <h1>Panels</h1>
     </div>
     <div data-role="content">   
-
-        <div class='inset'>
-            <h1>Panel Trigger</h1>
-            <a href="#mypanel" data-role='button' data-inline='true'><i class='lIcon fa fa-bars'></i>Open panel</a>
-            <h2>Code</h2>
-            <h3>Link</h3>
-            <pre>&lt;a href='#mypanel' data-role='button' data-icon='tasks' data-iconpos='left' data-inline='true'&gt;Open panel&lt;/a&gt;</pre>
-            <h3>Panel <code>#mypanel</code></h3>
-            <pre>&lt;div data-role='panel' id='mypanel' data-theme='b'&gt;<br />&ensp;...<br />&lt;/div&gt;</pre>
-        </div>
+        <ul data-nativedroid-plugin='cards'>
+            <li data-cards-type='weather'>
+                <h1>Pune</h1>
+                <h2>India</h2>
+                <ul class='detail'>
+                    <li><i class='fa fa-sun-o sunny'></i>
+                        <span>SUNNY</span>
+                        <span><i class='fa fa-fire'></i> 3km/h</span>
+                    </li>
+                    <li>24&deg;</li>
+                </ul>
+            </li>
+            <li data-cards-type='sports'>
+                <h2>Pending Tasks</h2>
+                <h1>Project Tasks<span>4</span></h1>
+                <h1>General Tasks<span>1</span></h1>
+                <a href='#'>more...</a>
+            </li>
+        </ul>
+        <script src="js/nativedroid.script.js"></script>
     </div>
 </div>
 </body>
