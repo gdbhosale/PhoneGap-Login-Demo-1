@@ -10,9 +10,7 @@
 <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
 <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
 <link rel="stylesheet" href="css/mystyles.css" />
-<style>
-    .ui-mobile .ui-page{background-image:url(img/texture1.png) !important;}
-</style>
+
 <!-- jQuery / jQueryMobile Scripts -->
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script>
@@ -21,7 +19,7 @@
 <div data-role="page" data-theme='b'>
     <div data-role="content">   
         <center><img class="logo" src='img/logo_sbs.png'></center>
-        <form action="panels.html" method="post">
+        <form action="panels.html" method="post" data-transition="flip">
             <ul data-role="listview" data-inset="true">
                 <li data-role="fieldcontain">
                     <input type="text" name="username" id="username" value="" data-clear-btn="true" placeholder="Username / Email">
