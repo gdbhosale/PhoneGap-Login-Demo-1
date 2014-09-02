@@ -4,9 +4,9 @@
         id        = "com.dwij.pg2app"
         versionCode="1"
         version   = "1.0">
-    <name>Phone Gap Demo 2</name>
+    <name>Phone Gap Login Demo</name>
     <description>
-        A sample app with PhoneGap Build		</description>
+        Application showing  Login UI With Sliding Effect..		</description>
     <author href="dwijitsolutions.com" email="ganesh@dwijitsolutions.com">
         Dwij IT Solutions
     </author>
