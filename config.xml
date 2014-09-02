@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.dwij.pg2app"
+        versionCode="1"
+        version   = "1.0">
+    <name>Phone Gap Demo 2</name>
+    <description>
+        A sample app with PhoneGap Build		</description>
+    <author href="dwijitsolutions.com" email="ganesh@dwijitsolutions.com">
+        Dwij IT Solutions
+    </author>
+    <gap:platform name="android" />
+    <gap:platform name="ios" />
+    <!--
+    
+    <gap:platform name="winphone" />
+    -->
+    
+    <preference name="phonegap-version" value="3.3.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="false" />
+    
+    <preference name="exit-on-suspend" value="false" />
+    
+    <!-- Multi-Platform Preferences  -->
+    <preference name="disallowOverscroll" value="true" /> <!-- (boolean, defaults to false): set to true if you don't want the interface to display any feedback when users scroll past the beginning or end of content -->
+    <preference name="BackgroundColor" value="0xffffffff "/> <!-- Supports a four-byte hex value, with the first byte representing the alpha channel, and standard RGB values for the following three bytes. -->
+    <preference name="HideKeyboardFormAccessoryBar" value="true"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    
+    <!-- iOS -->
+    <preference name="EnableViewportScale" value="false"/>
+    <preference name="MediaPlaybackRequiresUserAction" value="false"/>
+    <preference name="AllowInlineMediaPlayback" value="false"/>
+    <preference name="BackupWebStorage" value="cloud"/>
+    <preference name="TopActivityIndicator" value="gray"/>
+    <preference name="KeyboardDisplayRequiresUserAction" value="true"/>
+    <preference name="SuppressesIncrementalRendering" value="false"/>
+    <preference name="GapBetweenPages" value="0"/>
+    <preference name="PageLength" value="0"/>
+    <preference name="PaginationBreakingMode" value="page"/>
+    <preference name="PaginationMode" value="unpaginated"/>
+    <!-- <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' /> -->
+    
+    
+    
+    
+    
+    
+    <!-- Android -->
+    <preference name="KeepRunning" value="true"/>
+    <preference name="android-minSdkVersion" value="8" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="LoadUrlTimeoutValue" value="20000"/>
+    <preference name="SplashScreen" value="splash"/>
+    <preference name="SplashScreenDelay" value="3000"/>
+    
+    
+    
+    <preference name="prerendered-icon" value="false" />
+    
+    <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    <icon src="res/icon/android/icon-144-xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+    
+    <gap:splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
+    
+
+    <!--
+    <icon src="res/icon/ios/icon-57.png" gap:platform="ios" width="57" height="57" />
+    <icon src="res/icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="res/icon/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114" />
+    <icon src="res/icon/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
+    <icon src="res/icon/ios/icon-76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="res/icon/ios/icon-120.png" gap:platform="ios" width="120" height="120" />
+    <icon src="res/icon/ios/icon-152.png" gap:platform="ios" width="152" height="152" />
+    
+    <gap:splash src="res/screen/ios/screen-iphone-portrait.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="res/screen/ios/screen-iphone-landscape.png" gap:platform="ios" width="480" height="320" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="res/screen/ios/screen-iphone-landscape-2x.png" gap:platform="ios" width="960" height="640" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios" width="640" height="1136" />
+    <gap:splash src="res/screen/ios/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024 " />
+    <gap:splash src="res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768" />
+    <gap:splash src="res/screen/ios/screen-ipad-portrait-2x.png" gap:platform="ios" width="1536" height="2008" />
+    <gap:splash src="res/screen/ios/screen-ipad-landscape-2x.png" gap:platform="ios" width="2048" height="1496" />
+    
+    
+    <gap:splash src="res/icon/android/icon-144-xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+    -->
+    
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+
+    <gap:plugin name="org.apache.cordova.camera"  />
+    <gap:plugin name="org.apache.cordova.geolocation"  />
+    <gap:plugin name="org.apache.cordova.dialogs"  />
+    <gap:plugin name="org.apache.cordova.device"  />
+    <gap:plugin name="org.apache.cordova.network-information"  />
+    <gap:plugin name="org.apache.cordova.console"  />
+    <gap:plugin name="org.apache.cordova.inappbrowser"  />
+    <gap:plugin name="org.apache.cordova.network-information"  />
+    <gap:plugin name="org.apache.cordova.splashscreen"  />
+
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+
+    <access origin="*" subdomains="true" />
+
+
+</widget>

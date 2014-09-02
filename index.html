@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>nativeDroid - Theme for jQuery Mobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+
+<style>
+.ui-mobile .ui-page{background-image:url(img/texture1.png) !important;}
+.logo{max-width:100%;width:280px;margin:10% auto;}
+
+</style>
+
+<!-- jQuery / jQueryMobile Scripts -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+</head>
+<body>
+<div data-role="page" data-theme='b'>
+    <div data-role="content">   
+        <center><img class="logo" src='img/logo_sbs.png'></center>
+        <form>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="fieldcontain">
+                        <input type="text" name="username" id="username" value="" data-clear-btn="true" placeholder="Username / Email">
+                    </li>
+                    <li data-role="fieldcontain">
+                        <input type="text" name="password" id="password" value="" data-clear-btn="true" placeholder="Password">
+                    </li>
+                    <li>
+						<center><button type="submit" data-inline='true'><i class='lIcon fa fa-check'></i>Submit</button></center>
+                    </li>
+                </ul>
+            </form>
+    </div>
+</div>
+
+</body>
+</html>
