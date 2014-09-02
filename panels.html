@@ -1,35 +1,26 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>nativeDroid - Theme for jQuery Mobile</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		
-		<!-- FontAwesome - http://fortawesome.github.io/Font-Awesome/ -->
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
+<head>
+<title>nativeDroid - Theme for jQuery Mobile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
 
-		<!-- jQueryMobileCSS - original without styling -->
-		<link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css" />
-
-		<!-- nativeDroid core CSS -->
-        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
-
-		<!-- nativeDroid: Light/Dark -->
-        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
-
-		<!-- nativeDroid: Color Schemes -->
-        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
-
-		<!-- jQuery / jQueryMobile Scripts -->
-		<script src="js/jquery-1.9.1.min.js"></script>
-        <script src="js/jquery.mobile-1.4.3.min.js"></script>
-
-
-    </head>
-    <body>
-        
-    <div data-role="page" data-theme='b'>
-
-	<div data-role="panel" data-display="push" id="mypanel" data-theme="b">
+<style>
+.ui-mobile .ui-page{background-image:url(img/texture1.png) !important;}
+.logo{max-width:100%;width:280px;margin:10% auto;}
+</style>
+<!-- jQuery / jQueryMobile Scripts -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+</head>
+<body>
+<div data-role="page" data-theme='b'>
+    <div data-role="panel" data-display="push" id="mypanel" data-theme="b">
         <ul data-role="listview">
             <li>Your wishes</li>
             <li data-icon='false'><a href="#"><i class='lIcon fa fa-coffee'></i>Need a Coffee</a></li>
@@ -41,26 +32,22 @@
             <li data-icon='false'><a href="#"><i class='lIcon fa fa-trophy'></i>Win a Trophy</a></li>
         </ul>
     </div>
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-            <a href="index.html" data-ajax="false"><i class='fa fa-bars'></i></a>
-            <h1>Panels</h1>
-        </div>
-        
-        <div data-role="content">   
-		
-	        <div class='inset'>
-	            <h1>Panel Trigger</h1>
-	            <a href="#mypanel" data-role='button' data-inline='true'><i class='lIcon fa fa-bars'></i>Open panel</a>
-				<h2>Code</h2>
-				<h3>Link</h3>
-				<pre>&lt;a href='#mypanel' data-role='button' data-icon='tasks' data-iconpos='left' data-inline='true'&gt;Open panel&lt;/a&gt;</pre>
-				<h3>Panel <code>#mypanel</code></h3>
-				<pre>&lt;div data-role='panel' id='mypanel' data-theme='b'&gt;<br />&ensp;...<br />&lt;/div&gt;</pre>
-	        </div>
-	        
-        </div>
-
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+        <a href="#mypanel" data-role='button' data-inline='true'><i class='fa fa-bars'></i></a>
+        <h1>Panels</h1>
     </div>
-    
-    </body>
+    <div data-role="content">   
+
+        <div class='inset'>
+            <h1>Panel Trigger</h1>
+            <a href="#mypanel" data-role='button' data-inline='true'><i class='lIcon fa fa-bars'></i>Open panel</a>
+            <h2>Code</h2>
+            <h3>Link</h3>
+            <pre>&lt;a href='#mypanel' data-role='button' data-icon='tasks' data-iconpos='left' data-inline='true'&gt;Open panel&lt;/a&gt;</pre>
+            <h3>Panel <code>#mypanel</code></h3>
+            <pre>&lt;div data-role='panel' id='mypanel' data-theme='b'&gt;<br />&ensp;...<br />&lt;/div&gt;</pre>
+        </div>
+    </div>
+</div>
+</body>
 </html>
