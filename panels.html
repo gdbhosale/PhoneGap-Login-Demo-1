@@ -91,11 +91,14 @@
             console.log("Menu clicked: "+$(this).attr("href"));
             $(".ui-content").html("");
             $("#mypanel").panel("close");
+            $('.ui-content').load(url+".html");
+            /*
             $.ajax({
                 url: url+".html"
             }).done(function(data) {
                 $(".ui-content").html(data);
             });
+            */
         });
         $(".ui-panel-wrapper").on("swiperight", function(){
             $("#mypanel").panel("open");
