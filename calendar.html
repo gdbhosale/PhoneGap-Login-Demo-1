@@ -1,0 +1,97 @@
+<link rel='stylesheet' type='text/css' href='css/fullcalendar.css' />
+<style>
+
+    #calendar{width:95%;margin:10px auto;}
+    .fc-toolbar h2{font-size:17px;}
+    .fc-toolbar button{height:1.5em;line-height:1.3em;padding:0 .3em;}
+    .fc-unthemed th, .fc-unthemed td, .fc-unthemed hr, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {border-color: #6F6F6F;}
+    .fc-unthemed .fc-today {background: rgba(155, 255, 227, 0.21);}
+    .fc-content-skeleton tbody{display: none}
+    .fc-day-grid-container.fc-scroller{height:auto !important;overflow-y:hidden;}
+
+    /*
+    .fc-event{display:none;}
+    .fc-day-content{display:none;}
+    .fc td{vertical-align:middle;}
+    .fc-grid .fc-day-number{float: none;text-align: center;}
+    .fc-widget-header, .fc-widget-content{border: 1px solid rgba(204, 204, 204, 0);}
+    .fc-state-highlight{background:#73D1FD;border-radius:50%;}
+    .fc-content{margin-top:10px;}
+    */
+</style>
+<div id='calendar'></div>
+
+<script type='text/javascript' src='js/moment.min.js'></script>
+<script type='text/javascript' src='js/fullcalendar.min.js'></script>
+<script>
+    setTimeout(function(e,data) {
+        console.log("Init calendar");
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+
+        $('#calendar').fullCalendar({
+            defaultDate: '2014-09-12',
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2014-09-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2014-09-07',
+                    end: '2014-09-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2014-09-09T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2014-09-16T16:00:00'
+                },
+                {
+                    title: 'Conference',
+                    start: '2014-09-11',
+                    end: '2014-09-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2014-09-12T10:30:00',
+                    end: '2014-09-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2014-09-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2014-09-12T14:30:00'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2014-09-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2014-09-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2014-09-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2014-09-28'
+                }
+            ]
+        });
+        //$(".fc-widget-content").css("height", $(".fc-widget-content").width()+"px");
+    }, 2000);
+</script>

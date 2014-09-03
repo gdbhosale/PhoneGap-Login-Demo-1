@@ -1,5 +1,6 @@
-$(document).on("pageinit", function() {
 
+var refreshMyPage = function() {
+    console.log("+++++++++++++++++refreshMyPage+++++++++++++++++");
 	function strip_tags(input, allowed) {
 		allowed = (((allowed || "") + "").toLowerCase().match(/<[a-z][a-z0-9]*>/g) || []).join('');
 		// making sure the allowed arg is a string containing only tags in lowercase (<a><b><c>)
@@ -1237,4 +1238,6 @@ $(document).on("pageinit", function() {
 		nativeDroid.basic.disableScrollTop();
 	}
 
-}); 
+}; 
+
+$(document).on("pageinit", refreshMyPage);

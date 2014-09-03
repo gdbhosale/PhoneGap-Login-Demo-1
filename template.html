@@ -80,8 +80,9 @@
                 <a href='#'>more...</a>
             </li>
         </ul>
-        <script src="js/nativedroid.script.js"></script>
+        
     </div>
+<script src="js/nativedroid.script.js"></script>
 <script>
     $(document).on("pageinit", function() {
         $(".nav-menu li a").on("click", function(e) {
@@ -91,7 +92,12 @@
             console.log("Menu clicked: "+$(this).attr("href"));
             $(".ui-content").html("");
             $("#mypanel").panel("close");
-            $('.ui-content').load(url+".html");
+            
+            $('.ui-content').load(url+".html",function(){
+                $('.ui-content').trigger('create');
+            });
+            //$.mobile.loadPage(url+".html");
+            
             /*
             $.ajax({
                 url: url+".html"
@@ -100,11 +106,13 @@
             });
             */
         });
+        
+        return;
         $(".ui-panel-wrapper").on("swiperight", function(){
             $("#mypanel").panel("open");
         });
+        
     });
-    
 </script>
 </div>
 </body>
