@@ -1,20 +1,53 @@
-<ul data-nativedroid-plugin="cards" class="nativeDroidCards">
-    <li data-cards-type="weather">
-        <h1>Pune</h1>
-        <h2>Maharashtra, India</h2>
-        <ul class="detail">
-            <li><i class="fa fa-sun-o sunny"></i>
-                <span>SUNNY</span>
-                <span><i class="fa fa-fire"></i> 3km/h</span>
-            </li>
-            <li>24°</li>
-        </ul>
-    </li>
-    <li data-cards-type="sports">
-        <h2>Pending Tasks</h2>
-        <h1>Project Tasks<span>4</span></h1>
-        <h1>General Tasks<span>1</span></h1>
-        <a href="#" class="ui-link">more...</a>
-    </li>
-</ul>
-<script src="js/nativedroid.script.js"></script>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Dwij SBS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+        <link rel="stylesheet" href="css/mystyles.css" />
+
+        <!-- jQuery / jQueryMobile Scripts -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme='b'>
+            <div data-role="panel" data-display="push" id="mypanel" data-theme="b">
+
+            </div>
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+                <a href="#mypanel" data-role='button' data-inline='true'><i class='fa fa-bars'></i></a>
+                <h1>Dwij SBS</h1>
+            </div>
+            <div data-role="content">   
+                <ul data-nativedroid-plugin='cards'>
+                    <li data-cards-type='weather'>
+                        <h1>Pune</h1>
+                        <h2>Maharashtra, India</h2>
+                        <ul class='detail'>
+                            <li><i class='fa fa-sun-o sunny'></i>
+                                <span>SUNNY</span>
+                                <span><i class='fa fa-fire'></i> 3km/h</span>
+                            </li>
+                            <li>24&deg;</li>
+                        </ul>
+                    </li>
+                    <li data-cards-type='sports'>
+                        <h2>Pending Tasks</h2>
+                        <h1>Project Tasks<span>4</span></h1>
+                        <h1>General Tasks<span>1</span></h1>
+                        <a href='#'>more...</a>
+                    </li>
+                </ul>
+                <script src="js/nativedroid.script.js"></script>
+                <script src="js/app.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,25 +1,61 @@
-<div class='inset'>
-    <table id='project-table' data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
-        <thead>
-            <tr>
-                <th data-priority="1">#</th>
-                <th>Name</th>
-                <th data-priority="3">Start</th>
-                <th data-priority="2">End</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-        </tbody>
-    </table>
-</div>
-<script>
-    data = '[{"id":"1","name_short":"DwijPM","startdate":"2012-05-03","duedate":"2012-05-20"},{"id":"2","name_short":"AnoDB","startdate":"2012-04-11","duedate":"2012-05-03"}]';
-    projects = JSON.parse(data);
-    $table = $("#project-table");
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Dwij SBS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.custom.theme.min.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.css" />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css"  id='jQMnDTheme' />
+        <link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" id='jQMnDColor' />
+        <link rel="stylesheet" href="css/mystyles.css" />
 
-    for(var i=0; i<projects.length;i++) {
-        var project = projects[i];
-        $table.append("<tr><td>"+project.id+"</td><td><a href='#'>"+project.name_short+"</a></td><td>"+project.startdate+"</td><td>"+project.duedate+"</td></tr>")
-    }
-</script>
+        <!-- jQuery / jQueryMobile Scripts -->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme='b'>
+            <div data-role="panel" data-display="push" id="mypanel" data-theme="b">
+
+            </div>
+            <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+                <a href="#mypanel" data-role='button' data-inline='true'><i class='fa fa-bars'></i></a>
+                <h1>Dwij SBS</h1>
+            </div>
+            <div data-role="content">   
+                <div class='inset'>
+                    <table id='project-table' data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
+                        <thead>
+                            <tr>
+                                <th data-priority="1">#</th>
+                                <th>Name</th>
+                                <th data-priority="3">Start</th>
+                                <th data-priority="2">End</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <script>
+                    data = '[{"id":"1","name_short":"DwijPM","startdate":"2012-05-03","duedate":"2012-05-20"},{"id":"2","name_short":"AnoDB","startdate":"2012-04-11","duedate":"2012-05-03"}]';
+                    projects = JSON.parse(data);
+                    $table = $("#project-table");
+
+                    for(var i=0; i<projects.length;i++) {
+                        var project = projects[i];
+                        $table.append("<tr><td>"+project.id+"</td><td><a href='#'>"+project.name_short+"</a></td><td>"+project.startdate+"</td><td>"+project.duedate+"</td></tr>")
+                    }
+                </script>
+                <script src="js/nativedroid.script.js"></script>
+                <script src="js/app.js"></script>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
