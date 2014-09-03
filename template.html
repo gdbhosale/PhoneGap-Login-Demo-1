@@ -94,7 +94,8 @@
             $("#mypanel").panel("close");
             
             $('.ui-content').load(url+".html",function(){
-                $('.ui-content').trigger('create');
+                //$('.ui-content').trigger('create');
+                $('.ui-content').enhanceWithin();
             });
             //$.mobile.loadPage(url+".html");
             
